@@ -1,7 +1,7 @@
-@headColor: #495666;
-@headFontColor: #FFFFFF;
-@headFontColorHighlight: #DD7727;
-@navColor: #3D4754;
+@headColor: #FFFFFF;
+@headFontColor: #7CAB1D;
+@headFontColorHighlight: #628615;
+@navColor: #7CAB1D;
 @navFontColor: #FFFFFF;
 @footerBorder: #E1E1E1;
 @footerFontColor: #BBBBBB;
@@ -55,6 +55,21 @@ BOOTSTRAP OVERRIDES
 We do this here instead of customising Bootstrap LESS to
 make working with the Grails Bootstrap plugin easier.
 **/
+
+.breadcrumb {
+
+a {
+  color: #628615;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3F5908;
+  text-decoration: underline;
+}
+
+}
+
 .hero-unit {
   word-wrap: break-word;
 }
@@ -354,9 +369,10 @@ header {
   h1 {
     .zero;
     float: left;
-    font-size: 1.4em;
-    font-weight: normal;
-    padding-top: 6px;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-top: 18px;
+    padding-left: 10px;
   }
 
   h2 {
@@ -365,7 +381,7 @@ header {
     color: @headFontColorHighlight;
     font-size: 1.4em;
     font-weight: normal;
-    padding-top: 6px;
+    padding-top: 15px;
     padding-right: 12px;
   }
 }
