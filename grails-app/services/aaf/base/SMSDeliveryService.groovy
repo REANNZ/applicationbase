@@ -9,15 +9,16 @@ class SMSDeliveryService {
 
   def send(String to, String text) {
     def config = grailsApplication.config.aaf.base.sms
+    to = to[1..-1] // Remove leading + character
 
     boolean outcome = true
-    http.request( GET, JSON ) {
-      uri.path = '/sms/json'
-      uri.query = [api_key: config.api_key, api_secret:config.api_secret, from:'AAF', to:to, type:'text', text:text]
+    http.request( POST, TEXT ) {
+      uri.path = '/api/1/sms/out'
+      uri.query = [userId: config.api_key, password:config.api_secret, to:to, body:text]
 
-      response.success = { resp, json ->
+      response.success = { resp, reader ->
         log.debug resp.statusLine
-        log.info "Sent SMS to $to with successful response of ${json.messages}"
+        log.info "Sent SMS to $to with successful response of ${resp.status}"
         outcome = true
 
       }
