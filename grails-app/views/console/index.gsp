@@ -52,7 +52,7 @@
 <body>
 
 <div id="header">
-  <r:img dir='images' file='logo.jpg' plugin="aafApplicationBase" alt="${message(code:'branding.application.name')}" width="102" height="50" />
+  <r:img dir='images' file='logo.jpg' plugin="aafApplicationBase" alt="${message(code:'branding.application.name')}" width="310" height="82" />
   <h1><g:message code="branding.application.name" encodeAs="HTML"/></h1>
   <h2>Administration Console</h2>
 
