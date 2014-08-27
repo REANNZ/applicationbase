@@ -9,9 +9,10 @@
 
   <style>
     #header {
-      background: #495666;
+      background: #FFFFFF;
+      color: #7CAB1D;
       padding: 14px;
-      border-bottom: 8px solid #3D4754;
+      border-bottom: 8px solid #7CAB1D;
     }
 
     #header img {
@@ -25,7 +26,8 @@
       margin: 0px;
       padding: 0px;
 
-      background: #495666;
+      background: #FFFFFF;
+      color: #7CAB1D;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-variant: normal;
       font-size: 1.3em;
@@ -37,11 +39,11 @@
       margin: 0px;
       padding: 0px;
 
-      background: #495666;
+      background: #FFFFFF;
+      color: #628615;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-variant: normal;
       font-size: 0.9em;
-      color: orange;
       font-weight: normal;
       padding-top: 3px;
     }
