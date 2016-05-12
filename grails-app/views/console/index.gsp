@@ -10,9 +10,9 @@
   <style>
     #header {
       background: #FFFFFF;
-      color: #7CAB1D;
+      color: #00B9E4;
       padding: 14px;
-      border-bottom: 8px solid #7CAB1D;
+      border-bottom: 8px solid #00B9E4;
     }
 
     #header img {
@@ -27,7 +27,7 @@
       padding: 0px;
 
       background: #FFFFFF;
-      color: #7CAB1D;
+      color: #00B9E4;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-variant: normal;
       font-size: 1.3em;
@@ -40,7 +40,7 @@
       padding: 0px;
 
       background: #FFFFFF;
-      color: #628615;
+      color: #00B9E4;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-variant: normal;
       font-size: 0.9em;
@@ -54,7 +54,7 @@
 <body>
 
 <div id="header">
-  <r:img dir='images' file='logo.jpg' plugin="aafApplicationBase" alt="${message(code:'branding.application.name')}" width="310" height="82" />
+  <r:img dir='images' file='logo.jpg' plugin="aafApplicationBase" alt="${message(code:'branding.application.name')}" width="234" height="82" />
   <h1><g:message code="branding.application.name" encodeAs="HTML"/></h1>
   <h2>Administration Console</h2>
 

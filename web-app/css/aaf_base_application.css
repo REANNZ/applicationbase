@@ -1,7 +1,7 @@
 @headColor: #FFFFFF;
-@headFontColor: #7CAB1D;
-@headFontColorHighlight: #628615;
-@navColor: #7CAB1D;
+@headFontColor: #00B9E4;
+@headFontColorHighlight: #00B9E4;
+@navColor: #00B9E4;
 @navFontColor: #FFFFFF;
 @footerBorder: #E1E1E1;
 @footerFontColor: #BBBBBB;
@@ -59,7 +59,7 @@ make working with the Grails Bootstrap plugin easier.
 .breadcrumb {
 
 a {
-  color: #628615;
+  color: #00B9E4;
   text-decoration: none;
 }
 
