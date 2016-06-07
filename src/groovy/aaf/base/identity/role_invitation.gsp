@@ -5,5 +5,5 @@ rights for managing <strong>${targetName.encodeAsHTML()}</strong> within the <g:
 
 <h5>Your action is now required</h5>
 
-To finish setting your administrative rights <a href="${g.createLink(controller:'role', action:'finalization', params:['inviteCode':invitation.inviteCode], absolute:true)}">please access your unique finalisation page by clicking this link</a>. You may need to authenticate via your AAF
+To finish setting your administrative rights <a href="${g.createLink(controller:'role', action:'finalization', params:['inviteCode':invitation.inviteCode], absolute:true)}">please access your unique finalisation page by clicking this link</a>. You may need to authenticate via your Tuakiri
 Identity Provider to complete this process.
