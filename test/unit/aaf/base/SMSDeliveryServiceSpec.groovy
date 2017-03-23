@@ -31,18 +31,18 @@ class SMSDeliveryServiceSpec extends Specification {
     service.send('+1234', 'test message')
 
     then:
-    1 * http.request(GET, JSON, _ as Closure) >> { arguments ->
+    1 * http.request(POST, TEXT, _ as Closure) >> { arguments ->
       def cl = arguments[2]
       cl.delegate = data
       cl()
     }
 
-    data.uri.path == '/sms/json'
+    data.uri.path == '/api/1/sms/out'
     data.uri.query instanceof Map
-    data.uri.query.to == '+1234'
-    data.uri.query.text == 'test message'
-    data.uri.query.api_key == 'api_key'
-    data.uri.query.api_secret == 'api_secret'
+    data.uri.query.to == '1234' // expect leading '+' char removed
+    data.uri.query.body == 'test message'
+    data.uri.query.userId == 'api_key'
+    data.uri.query.password == 'api_secret'
     data.response.success instanceof Closure
     data.response.failure instanceof Closure
   }
