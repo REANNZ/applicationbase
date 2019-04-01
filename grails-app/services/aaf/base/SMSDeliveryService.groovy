@@ -12,7 +12,7 @@ class SMSDeliveryService {
     to = to[1..-1] // Remove leading + character
 
     boolean outcome = true
-    http.request( POST, TEXT ) {
+    http.request( POST ) {
       uri.path = '/api/1/sms/out'
       uri.query = [userId: config.api_key, password:config.api_secret, to:to, body:text]
 
