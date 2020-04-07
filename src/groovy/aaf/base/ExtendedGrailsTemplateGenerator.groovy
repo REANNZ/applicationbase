@@ -28,7 +28,7 @@ class ExtendedGrailsTemplateGenerator extends DefaultGrailsTemplateGenerator {
     }
   }
 
-  protected canWrite(File testFile) {
+  protected boolean canWrite(File testFile) {
     if (!overwrite && testFile.exists()) {
       try {
         def response = GrailsConsole.getInstance().userInput("File ${makeRelativeIfPossible(testFile.absolutePath, basedir)} already exists. Overwrite?",['y','n','a'] as String[])
