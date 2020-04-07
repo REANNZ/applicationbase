@@ -5,6 +5,7 @@ import grails.plugin.spock.*
 import org.apache.shiro.authc.*
 import aaf.base.identity.*
 
+@TestMixin(IntegrationTestMixin)
 class FederatedRealmSpec extends IntegrationSpec {
 
   def grailsApplication

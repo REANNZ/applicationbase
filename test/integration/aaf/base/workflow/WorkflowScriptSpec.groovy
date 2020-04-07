@@ -5,6 +5,7 @@ import grails.plugin.spock.*
 import aaf.base.identity.Subject
 import aaf.base.identity.Role
 
+@TestMixin(IntegrationTestMixin)
 class WorkflowScriptSpec extends IntegrationSpec {
   static transactional = true
   

@@ -6,6 +6,7 @@ import org.apache.shiro.subject.Subject
 import aaf.base.identity.Subject
 import aaf.base.identity.Role
 
+@TestMixin(IntegrationTestMixin)
 class WorkflowProcessServiceSpec extends IntegrationSpec {
   static transactional = true
   

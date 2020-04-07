@@ -11,6 +11,7 @@ import com.icegreen.greenmail.util.*
 import aaf.base.identity.Role
 import aaf.base.identity.Subject
 
+@TestMixin(IntegrationTestMixin)
 class WorkflowTaskServiceSpec extends IntegrationSpec {
   
   def workflowProcessService

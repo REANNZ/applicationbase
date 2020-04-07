@@ -7,6 +7,7 @@ import com.icegreen.greenmail.util.*
 
 import aaf.base.admin.EmailTemplate
 
+@TestMixin(IntegrationTestMixin)
 class EmailManagerServiceSpec extends IntegrationSpec {
 
   def emailManagerService
