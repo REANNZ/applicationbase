@@ -77,9 +77,6 @@ grails.project.dependency.resolution = {
     runtime ":cache-headers:1.1.5"
     runtime ":audit-logging:0.5.4"
 
-    test(":spock:0.7") {
-      exclude "spock-grails-support"
-    }
     test    ":code-coverage:1.2.5"
   }
 }
