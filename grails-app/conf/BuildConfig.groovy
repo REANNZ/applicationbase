@@ -61,6 +61,7 @@ grails.project.dependency.resolution = {
     compile ":codenarc:0.17"
     compile ":build-test-data:2.2.3"
     compile ":rest:0.7"
+    compile ":scaffolding:1.0.0"
 
     runtime ":hibernate:3.6.10.16"
     runtime ":resources:1.2.RC2"
