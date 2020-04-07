@@ -52,7 +52,7 @@ grails.project.dependency.resolution = {
     provided: Dependencies needed at development time, but not during WAR deployment
   */
   plugins {
-    build ":tomcat:$grailsVersion"
+    build ":tomcat:7.0.54"
 
     compile ":shiro:1.1.3"
     compile ':cache:1.0.0'
@@ -62,7 +62,7 @@ grails.project.dependency.resolution = {
     compile ":build-test-data:2.0.3"
     compile ":rest:0.7"
 
-    runtime ":hibernate:$grailsVersion"
+    runtime ":hibernate:3.6.10.16"
     runtime ":resources:1.2.RC2"
     runtime ":zipped-resources:1.0"
     runtime ":cached-resources:1.0"
