@@ -31,8 +31,8 @@ class SMSDeliveryServiceSpec extends Specification {
     service.send('+1234', 'test message')
 
     then:
-    1 * http.request(POST, TEXT, _ as Closure) >> { arguments ->
-      def cl = arguments[2]
+    1 * http.request(POST, _ as Closure) >> { arguments ->
+      def cl = arguments[1]
       cl.delegate = data
       cl()
     }
