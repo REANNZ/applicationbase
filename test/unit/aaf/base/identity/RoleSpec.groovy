@@ -34,7 +34,7 @@ class RoleSpec extends UnitSpec {
     mockDomain(Role)
     
     when:
-    new Role(name:'testrole').save()
+    new Role(name:'testrole').save(flush: true)
     def r = new Role(name:'testrole').validate()
     
     then:

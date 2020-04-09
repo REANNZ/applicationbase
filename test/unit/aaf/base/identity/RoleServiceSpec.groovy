@@ -75,6 +75,7 @@ class RoleServiceSpec extends spock.lang.Specification {
     setup:
     def rs = new RoleService()
     rs.createRole('role', 'role description', false)
+    simpleDatastore.currentSession.flush()
     
     when:
     def role = rs.createRole('role', 'role description', false)
