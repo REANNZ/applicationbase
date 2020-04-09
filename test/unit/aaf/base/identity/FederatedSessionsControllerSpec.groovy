@@ -12,7 +12,6 @@ import test.shared.ShiroEnvironment
 
 @TestFor(aaf.base.identity.FederatedSessionsController)
 @TestMixin([grails.test.mixin.support.GrailsUnitTestMixin, grails.test.mixin.web.FiltersUnitTestMixin])
-@Mock(aaf.base.AAFBaseSecurityFilters)
 class FederatedSessionsControllerSpec extends spock.lang.Specification {
   
   @Shared def shiroEnvironment = new ShiroEnvironment()
@@ -624,6 +623,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
     def model
     def subject = Mock(org.apache.shiro.subject.Subject)
     shiroEnvironment.setSubject(subject)
+    mockFilters(aaf.base.AAFBaseSecurityFilters)
 
     when:
     withFilters(controller: 'federatedSessions', action: 'federatedlogin') {
