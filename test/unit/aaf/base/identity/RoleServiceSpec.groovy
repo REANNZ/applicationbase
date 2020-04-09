@@ -119,8 +119,8 @@ class RoleServiceSpec extends spock.lang.Specification {
     def rs = new RoleService()
     
     def role = rs.createRole('role', 'role description', false)
-    def subject = Subject.build()
-    def subject2 = Subject.build()
+    def subject = Subject.build(principal: "principal1")
+    def subject2 = Subject.build(principal: "principal2")
 
     role.addToSubjects(subject).save()
     role.addToSubjects(subject2).save()
