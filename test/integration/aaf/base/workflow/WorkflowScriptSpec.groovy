@@ -1,6 +1,8 @@
 package aaf.base.workflow
 
 import grails.plugin.spock.*
+import grails.test.mixin.TestMixin
+import grails.test.mixin.integration.IntegrationTestMixin
 
 import aaf.base.identity.Subject
 import aaf.base.identity.Role

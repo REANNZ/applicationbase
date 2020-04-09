@@ -1,4 +1,5 @@
 import grails.test.mixin.*
+import grails.test.mixin.integration.IntegrationTestMixin
 import spock.lang.*
 import grails.plugin.spock.*
 
