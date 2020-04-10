@@ -2,13 +2,11 @@ package aaf.base.workflow
 
 import grails.test.spock.*
 import grails.test.mixin.TestMixin
-import grails.test.mixin.integration.IntegrationTestMixin
 import org.apache.shiro.subject.Subject
 
 import aaf.base.identity.Subject
 import aaf.base.identity.Role
 
-@TestMixin(IntegrationTestMixin)
 class WorkflowProcessServiceSpec extends IntegrationSpec {
   static transactional = true
   

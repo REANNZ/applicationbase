@@ -1,12 +1,10 @@
 import grails.test.mixin.*
-import grails.test.mixin.integration.IntegrationTestMixin
 import spock.lang.*
 import grails.test.spock.*
 
 import org.apache.shiro.authc.*
 import aaf.base.identity.*
 
-@TestMixin(IntegrationTestMixin)
 class FederatedRealmSpec extends IntegrationSpec {
 
   def grailsApplication

@@ -2,7 +2,6 @@ package aaf.base.workflow
 
 import grails.test.spock.*
 import grails.test.mixin.TestMixin
-import grails.test.mixin.integration.IntegrationTestMixin
 import spock.util.concurrent.*
 import java.util.concurrent.*
 
@@ -13,7 +12,6 @@ import com.icegreen.greenmail.util.*
 import aaf.base.identity.Role
 import aaf.base.identity.Subject
 
-@TestMixin(IntegrationTestMixin)
 class WorkflowTaskServiceSpec extends IntegrationSpec {
   
   def workflowProcessService
