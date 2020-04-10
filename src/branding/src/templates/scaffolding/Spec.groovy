@@ -1,7 +1,7 @@
 <%=packageName ? "package ${packageName}" : ''%>
 
 import grails.test.mixin.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 import grails.buildtestdata.mixin.Build
 
 import spock.lang.*

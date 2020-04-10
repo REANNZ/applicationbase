@@ -2,7 +2,7 @@ package aaf.base.identity
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(aaf.base.identity.Subject)
 class SubjectSpec extends spock.lang.Specification {

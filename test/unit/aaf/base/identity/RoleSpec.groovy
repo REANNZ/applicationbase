@@ -2,10 +2,10 @@ package aaf.base.identity
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(aaf.base.identity.Role)
-class RoleSpec extends UnitSpec {
+class RoleSpec extends Specification {
   
   def 'Ensure Role wont validate with null name'() {
     setup:
