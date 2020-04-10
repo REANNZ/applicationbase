@@ -87,7 +87,7 @@ class WorkflowScriptSpec extends IntegrationSpec {
     
     then:
     wfs.hasErrors()
-    wfs.errors.getFieldError('definition').code == 'blank'
+    wfs.errors.getFieldError('definition').code == 'nullable'
   }
   
   def "validate a WorkflowScript with a non-parsable execution definition is invalid"() {  
