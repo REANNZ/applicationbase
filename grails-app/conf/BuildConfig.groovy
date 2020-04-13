@@ -52,28 +52,28 @@ grails.project.dependency.resolution = {
   plugins {
     build ":tomcat:7.0.55.2"
 
-    compile ":shiro:1.1.3"
+    compile ":shiro:1.2.1"
     compile ':cache:1.1.8'
-    compile ":mail:1.0"
+    compile ":mail:1.0.7"
     compile ":greenmail:1.3.4"
-    compile ":codenarc:0.17"
-    compile ":build-test-data:2.2.3"
-    compile ":rest:0.7"
+    compile ":codenarc:0.24"
+    compile ":build-test-data:2.4.0"
+    compile ":rest:0.8"
     compile ":scaffolding:2.1.2"
 
     runtime ":hibernate4:4.3.8.1"
-    runtime ":resources:1.2.RC2"
-    runtime ":zipped-resources:1.0"
-    runtime ":cached-resources:1.0"
+    runtime ":resources:1.2.14"
+    runtime ":zipped-resources:1.0.1"
+    runtime ":cached-resources:1.1"
     runtime ":yui-minify-resources:0.1.4"
     runtime ":database-migration:1.4.0"
     runtime ":jquery:1.11.1"
     runtime ":modernizr:2.6.2"
     runtime (":twitter-bootstrap:2.1.1") { excludes "svn" }
     runtime ":constraintkeys:0.1"
-    runtime ":console:1.2"
-    runtime ":cache-headers:1.1.5"
-    runtime ":audit-logging:0.5.4"
+    runtime ":console:1.5.9"
+    runtime ":cache-headers:1.1.7"
+    runtime ":audit-logging:1.0.7"
 
     test    ":code-coverage:1.2.5"
   }
