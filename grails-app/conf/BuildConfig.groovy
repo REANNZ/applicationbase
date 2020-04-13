@@ -43,6 +43,8 @@ grails.project.dependency.resolution = {
     runtime 'org.springframework:spring-tx:4.0.9.RELEASE'
     runtime 'org.springframework:spring-aop:4.0.9.RELEASE'
     runtime 'org.springframework:spring-expression:4.0.9.RELEASE'
+    // because resources-1.2.14 does not declare dependency on commons-io
+    runtime "commons-io:commons-io:1.3.2"
   }
 
   /*
