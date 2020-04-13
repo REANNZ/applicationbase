@@ -38,7 +38,7 @@ grails.project.dependency.resolution = {
 
     test 'mysql:mysql-connector-java:5.1.18'
 
-    runtime 'org.springframework:spring-test:3.0.6.RELEASE'
+    runtime 'org.springframework:spring-test:4.0.9.RELEASE'
   }
 
   /*
