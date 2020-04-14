@@ -1,6 +1,6 @@
 package aaf.base.identity
 
-import org.codehaus.groovy.grails.commons.ApplicationHolder
+import grails.util.Holders
 import org.springframework.context.i18n.LocaleContextHolder
 import aaf.base.admin.EmailTemplate
 
@@ -167,7 +167,7 @@ class RoleService {
   }
 
   public void sendInvitation(String targetName, String emailAddress, String redirectTo, Role role) {
-    def emailManagerService = ApplicationHolder.application.mainContext.getBean("emailManagerService")
+    def emailManagerService = Holders.applicationContext.getBean("emailManagerService")
     def emailSubject = messageSource.getMessage(TOKEN_EMAIL_SUBJECT, [] as Object[], TOKEN_EMAIL_SUBJECT, LocaleContextHolder.locale)
     def emailTemplate = EmailTemplate.findWhere(name:"role_invitation")
 

@@ -6,7 +6,7 @@ import grails.test.spock.*
 
 import org.apache.shiro.authc.*
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 import test.shared.ShiroEnvironment
 
@@ -44,7 +44,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       active: false,
       development: [ active: false ],
     ] 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.addHeader("User-Agent", "Google Chrome X.Y")
 
     when:
@@ -68,7 +68,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
         credential: 'Shib-Session-ID',
       ]
     ] 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.addHeader("User-Agent", "Google Chrome X.Y")
 
     when:
@@ -93,7 +93,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.addHeader("User-Agent", "Google Chrome X.Y")
 
@@ -120,7 +120,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -158,7 +158,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -196,7 +196,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -234,7 +234,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -268,7 +268,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -310,7 +310,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -352,7 +352,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.addHeader('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.addHeader('Shib-Session-ID', '1234-mockid-5678')
     request.addHeader('Shib-Identity-Provider', 'https://entity.com/id')
@@ -394,7 +394,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.addHeader('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.addHeader('Shib-Session-ID', '1234-mockid-5678')
     request.addHeader('Shib-Identity-Provider', 'https://entity.com/id')
@@ -436,7 +436,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -480,7 +480,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -520,7 +520,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -560,7 +560,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ] 
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     request.setAttribute('persistent-id', 'http://test.com!http://sp.test.com!1234')
     request.setAttribute('Shib-Session-ID', '1234-mockid-5678')
     request.setAttribute('Shib-Identity-Provider', 'https://entity.com/id')
@@ -609,7 +609,7 @@ class FederatedSessionsControllerSpec extends spock.lang.Specification {
       ]
     ]
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     params.'attributes.persistent-id' = 'http://test.com!http://sp.test.com!1234'
     params.'attributes.Shib-Session-ID' = '1234-mockid-5678'
     params.'attributes.Shib-Identity-Provider' = 'https://entity.com/id'
