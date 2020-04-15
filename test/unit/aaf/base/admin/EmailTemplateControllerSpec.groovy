@@ -6,6 +6,7 @@ import spock.lang.*
 import grails.test.spock.*
 
 @TestFor(aaf.base.admin.EmailTemplateController)
+@Mock([EmailTemplate])
 @Build([EmailTemplate])
 class EmailTemplateControllerSpec extends spock.lang.Specification {
 

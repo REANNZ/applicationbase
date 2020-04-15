@@ -6,6 +6,7 @@ import spock.lang.*
 import grails.test.spock.*
 
 @TestFor(aaf.base.identity.PermissionService)
+@Mock([Subject, Role, Permission])
 @Build([Subject, Role, Permission])
 class PermissionServiceSpec extends Specification {
 
