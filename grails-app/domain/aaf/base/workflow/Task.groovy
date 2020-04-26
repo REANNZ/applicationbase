@@ -3,7 +3,7 @@ package aaf.base.workflow
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
-@ToString(includeNames=true, includeFields=true, excludes="execute, outcomes, rejections, approverRoles, approvers, dependenices")
+@ToString(includeNames=true, includeFields=true, excludes="execute, outcomes, rejections, approverRoles, approvers, dependencies")
 @EqualsAndHashCode
 class Task {
   static auditable = true
@@ -17,7 +17,7 @@ class Task {
   
   List approverRoles = []
   List approvers = []
-  List dependenices = []
+  List dependencies = []
     
   boolean finishOnThisTask = false
 
