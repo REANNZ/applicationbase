@@ -40,11 +40,11 @@ grails.project.dependency.resolution = {
     test 'org.hamcrest:hamcrest-all:1.3'
     test 'asm:asm:3.3.1'
 
-    runtime 'org.springframework:spring-test:4.0.9.RELEASE'
-    runtime 'org.springframework:spring-orm:4.0.9.RELEASE'
-    runtime 'org.springframework:spring-tx:4.0.9.RELEASE'
-    runtime 'org.springframework:spring-aop:4.0.9.RELEASE'
-    runtime 'org.springframework:spring-expression:4.0.9.RELEASE'
+    runtime 'org.springframework:spring-test:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-orm:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-tx:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-aop:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-expression:4.1.9.RELEASE'
     // because resources-1.2.14 does not declare dependency on commons-io
     runtime "commons-io:commons-io:1.3.2"
   }
@@ -69,7 +69,7 @@ grails.project.dependency.resolution = {
     compile ":rest:0.8"
     compile ":scaffolding:2.1.2"
 
-    runtime ":hibernate4:4.3.8.1"
+    runtime ":hibernate4:4.3.10"
     runtime ":resources:1.2.14"
     runtime ":zipped-resources:1.0.1"
     runtime ":cached-resources:1.1"
