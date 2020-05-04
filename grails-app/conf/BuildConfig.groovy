@@ -87,6 +87,8 @@ grails.project.dependency.resolution = {
   }
 }
 
+grails.project.dependency.resolver = "maven"
+
 codenarc {
   properties = { GrailsPublicControllerMethod.enabled = false
                  ThrowRuntimeException.enabled = false }
