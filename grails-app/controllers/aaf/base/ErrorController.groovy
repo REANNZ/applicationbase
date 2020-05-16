@@ -5,6 +5,18 @@ import org.apache.shiro.SecurityUtils
 
 class ErrorController {
 
+  def notPermitted() {
+    if(request.forwardURI.startsWith("/api")) {
+      log.error "API request not permitited from ${request.remoteHost} directed to ${request.forwardURI}"
+
+      response.status = 403
+      render buildJSONErrorResponse('not permitted', 'api action not permitted - see documentation') as JSON
+      return
+    }
+
+    render view: "/403"
+  }
+
   def notFound() {
     if(request.forwardURI.startsWith("/api")) {
       log.error "API unknown endpoint when processing request from ${request.remoteHost} directed to ${request.forwardURI}"
