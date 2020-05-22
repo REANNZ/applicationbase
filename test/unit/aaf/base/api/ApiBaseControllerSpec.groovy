@@ -2,7 +2,7 @@ package aaf.base.api
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(aaf.base.api.ApiBaseController)
 class ApiBaseControllerSpec extends spock.lang.Specification {

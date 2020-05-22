@@ -1,6 +1,7 @@
 package aaf.base.workflow
 
-import grails.plugin.spock.*
+import grails.test.spock.*
+import grails.test.mixin.TestMixin
 import spock.util.concurrent.*
 import java.util.concurrent.*
 

@@ -1,6 +1,7 @@
 package aaf.base.workflow
 
-import grails.plugin.spock.*
+import grails.test.spock.*
+import grails.test.mixin.TestMixin
 import org.apache.shiro.subject.Subject
 
 import aaf.base.identity.Subject

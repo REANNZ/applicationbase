@@ -2,7 +2,7 @@ package aaf.base
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 import com.icegreen.greenmail.util.*
 
 import aaf.base.admin.EmailTemplate
@@ -18,7 +18,7 @@ class EmailManagerServiceSpec extends IntegrationSpec {
 
   def 'verify successful sending of basic email message'() {
     setup:
-    def ev = new EmailTemplate(name:"testemail", content: "TODAY123")
+    def ev = new EmailTemplate(name:"testemail1", content: "TODAY123")
 
     when:
     emailManagerService.send('testuser@testdomain.com', 'email subject', ev, [:], )
@@ -37,7 +37,7 @@ class EmailManagerServiceSpec extends IntegrationSpec {
 
   def 'verify successful sending of basic email message with CC'() {
     setup:
-    def ev = new EmailTemplate(name:"testemail", content: "TODAY123")
+    def ev = new EmailTemplate(name:"testemail2", content: "TODAY123")
 
     when:
     emailManagerService.send('testuser@testdomain.com', 'email subject', ev, [:], 'cc@testdomain.com', 'bcc@testdomain.com')
@@ -57,7 +57,7 @@ class EmailManagerServiceSpec extends IntegrationSpec {
 
   def 'verify successful sending of complex email message using GSP taglibs and groovy code'() {
     setup:
-    def ev = new EmailTemplate(name:"testemail", content:new File('test/data/email_complex_template.gsp').text)
+    def ev = new EmailTemplate(name:"testemail3", content:new File('test/data/email_complex_template.gsp').text)
 
     when:
     emailManagerService.send('testuser@testdomain.com', 'complex email subject', ev, [subject:'test user', animals:['dogs', 'cats']])

@@ -2,10 +2,10 @@ package aaf.base.identity
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(aaf.base.identity.SessionRecord)
-class SessionRecordSpec extends UnitSpec {
+class SessionRecordSpec extends Specification {
   
   def 'Ensure SessionRecord wont validate with null credential'() {
     setup:

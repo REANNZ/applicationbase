@@ -3,11 +3,12 @@ package aaf.base.identity
 import grails.test.mixin.*
 import grails.buildtestdata.mixin.Build
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(aaf.base.identity.PermissionService)
+@Mock([Subject, Role, Permission])
 @Build([Subject, Role, Permission])
-class PermissionServiceSpec extends UnitSpec {
+class PermissionServiceSpec extends Specification {
 
   def 'ensure error saving permissions throws RuntimeException to rollback transaction state'() {
     setup:

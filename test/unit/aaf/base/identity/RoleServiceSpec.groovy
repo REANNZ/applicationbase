@@ -3,7 +3,7 @@ package aaf.base.identity
 import grails.test.mixin.*
 import grails.buildtestdata.mixin.Build
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(aaf.base.identity.PermissionService)
 @Mock([Subject, Role, Permission])
@@ -75,6 +75,7 @@ class RoleServiceSpec extends spock.lang.Specification {
     setup:
     def rs = new RoleService()
     rs.createRole('role', 'role description', false)
+    simpleDatastore.currentSession.flush()
     
     when:
     def role = rs.createRole('role', 'role description', false)
@@ -118,8 +119,8 @@ class RoleServiceSpec extends spock.lang.Specification {
     def rs = new RoleService()
     
     def role = rs.createRole('role', 'role description', false)
-    def subject = Subject.build()
-    def subject2 = Subject.build()
+    def subject = Subject.build(principal: "principal1")
+    def subject2 = Subject.build(principal: "principal2")
 
     role.addToSubjects(subject).save()
     role.addToSubjects(subject2).save()

@@ -1,7 +1,7 @@
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 import org.apache.shiro.authz.permission.WildcardPermissionResolver
 import org.apache.shiro.authz.permission.WildcardPermission
