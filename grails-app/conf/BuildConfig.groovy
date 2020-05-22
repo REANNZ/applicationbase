@@ -25,21 +25,28 @@ grails.project.dependency.resolution = {
     grailsCentral()
 
     mavenLocal()
-    mavenCentral()
+    // mavenCentral()
+    mavenRepo "https://repo1.maven.org/maven2"
 
-    mavenRepo "http://repo.grails.org/grails/repo/"
-    mavenRepo "http://download.java.net/maven/2/"
-    mavenRepo "http://repository.jboss.com/maven2/"
+    mavenRepo "https://repo.grails.org/grails/plugins-releases/"
+    mavenRepo "https://download.java.net/maven/2/"
+    mavenRepo "https://repository.jboss.org/maven2/"
   }
 
   dependencies {
-    compile "org.codehaus:groovy-all:2.0.8+aaf.groovy7664"
     compile "commons-collections:commons-collections:3.2.2"
 
     test 'mysql:mysql-connector-java:5.1.18'
-    test 'org.spockframework:spock-grails-support:0.7-groovy-2.0'
+    test 'org.hamcrest:hamcrest-all:1.3'
+    test 'asm:asm:3.3.1'
 
-    runtime 'org.springframework:spring-test:3.0.6.RELEASE'
+    runtime 'org.springframework:spring-test:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-orm:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-tx:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-aop:4.1.9.RELEASE'
+    runtime 'org.springframework:spring-expression:4.1.9.RELEASE'
+    // because resources-1.2.14 does not declare dependency on commons-io
+    runtime "commons-io:commons-io:1.3.2"
   }
 
   /*
@@ -51,36 +58,36 @@ grails.project.dependency.resolution = {
     provided: Dependencies needed at development time, but not during WAR deployment
   */
   plugins {
-    build ":tomcat:$grailsVersion"
+    build ":tomcat:7.0.55.2"
 
-    compile ":shiro:1.1.3"
-    compile ':cache:1.0.0'
-    compile ":mail:1.0"
+    compile ":shiro:1.2.1"
+    compile ':cache:1.1.8'
+    compile ":mail:1.0.7"
     compile ":greenmail:1.3.4"
-    compile ":codenarc:0.17"
-    compile ":build-test-data:2.0.3"
-    compile ":rest:0.7"
+    compile ":codenarc:0.24"
+    compile ":build-test-data:2.4.0"
+    compile ":rest:0.8"
+    compile ":scaffolding:2.1.2"
 
-    runtime ":hibernate:$grailsVersion"
-    runtime ":resources:1.2.RC2"
-    runtime ":zipped-resources:1.0"
-    runtime ":cached-resources:1.0"
+    runtime ":hibernate4:4.3.10"
+    runtime ":resources:1.2.14"
+    runtime ":zipped-resources:1.0.1"
+    runtime ":cached-resources:1.1"
     runtime ":yui-minify-resources:0.1.4"
-    runtime ":database-migration:1.1"
-    runtime ":jquery:1.7.2"
+    runtime ":database-migration:1.4.0"
+    runtime ":jquery:1.11.1"
     runtime ":modernizr:2.6.2"
-    runtime (":twitter-bootstrap:2.1.1") { excludes "svn" }
+    runtime (":twitter-bootstrap:2.3.2.3") { excludes "svn" }
     runtime ":constraintkeys:0.1"
-    runtime ":console:1.2"
-    runtime ":cache-headers:1.1.5"
-    runtime ":audit-logging:0.5.4"
+    runtime ":console:1.5.9"
+    runtime ":cache-headers:1.1.7"
+    runtime ":audit-logging:1.0.7"
 
-    test(":spock:0.7") {
-      exclude "spock-grails-support"
-    }
     test    ":code-coverage:1.2.5"
   }
 }
+
+grails.project.dependency.resolver = "maven"
 
 codenarc {
   properties = { GrailsPublicControllerMethod.enabled = false

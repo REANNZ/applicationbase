@@ -1,6 +1,6 @@
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 import org.apache.shiro.authc.*
 import aaf.base.identity.*

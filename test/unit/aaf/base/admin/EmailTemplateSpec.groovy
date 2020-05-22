@@ -2,10 +2,10 @@ package aaf.base.admin
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(EmailTemplate)
-class EmailTemplateSpec extends UnitSpec {
+class EmailTemplateSpec extends Specification {
 
   def 'ensure name must not be null or blank'() {
     setup:

@@ -1,6 +1,6 @@
 package aaf.base.workflow
 
-import grails.plugin.spock.*
+import grails.test.spock.*
 import aaf.base.identity.Subject
 
 class ProcessSpec extends IntegrationSpec {

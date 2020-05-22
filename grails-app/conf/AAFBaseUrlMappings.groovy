@@ -76,7 +76,7 @@ class AAFBaseUrlMappings {
     }
 
     // Errors
-    "403"(view:'/403')
+    "403"(controller:'error', action:'notPermitted')
     "404"(controller:'error', action:'notFound')
     "405"(view:'/405')
     "500"(controller:'error', action:'internalServerError')

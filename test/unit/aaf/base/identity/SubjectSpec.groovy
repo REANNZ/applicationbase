@@ -2,7 +2,7 @@ package aaf.base.identity
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 @TestFor(aaf.base.identity.Subject)
 class SubjectSpec extends spock.lang.Specification {
@@ -25,7 +25,7 @@ class SubjectSpec extends spock.lang.Specification {
   
   def 'Ensure subject wont validate with non-unique principal'() {    
     when:
-    def s1 = new Subject(principal:'http://test.edu.au!http://sp.test.edu.au!1234').save()
+    def s1 = new Subject(principal:'http://test.edu.au!http://sp.test.edu.au!1234').save(flush: true)
     def s2 = new Subject(principal:'http://test.edu.au!http://sp.test.edu.au!1234')
     
     then:

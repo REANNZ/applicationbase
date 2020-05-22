@@ -1,7 +1,7 @@
 package aaf.base.identity
 
 import spock.lang.*
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 @TestFor(DevelopmentAttributesService)
 class DevelopmentAttributesServiceSpec extends spock.lang.Specification {
@@ -18,7 +18,7 @@ class DevelopmentAttributesServiceSpec extends spock.lang.Specification {
       ]
     ]
 
-    service.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    service.metaClass.getGrailsApplication = { -> [config: Holders.config]}
   }
 
   def buildRequest() {

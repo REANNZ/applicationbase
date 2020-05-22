@@ -1,6 +1,7 @@
 package aaf.base.workflow
 
-import grails.plugin.spock.*
+import grails.test.spock.*
+import grails.test.mixin.TestMixin
 
 import aaf.base.identity.Subject
 import aaf.base.identity.Role
@@ -86,7 +87,7 @@ class WorkflowScriptSpec extends IntegrationSpec {
     
     then:
     wfs.hasErrors()
-    wfs.errors.getFieldError('definition').code == 'blank'
+    wfs.errors.getFieldError('definition').code == 'nullable'
   }
   
   def "validate a WorkflowScript with a non-parsable execution definition is invalid"() {  

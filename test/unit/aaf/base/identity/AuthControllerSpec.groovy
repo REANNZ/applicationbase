@@ -2,11 +2,11 @@ package aaf.base.identity
 
 import grails.test.mixin.*
 import spock.lang.*
-import grails.plugin.spock.*
+import grails.test.spock.*
 
 import org.apache.shiro.authc.*
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 import test.shared.ShiroEnvironment
 
@@ -24,7 +24,7 @@ class AuthControllerSpec extends spock.lang.Specification {
     grailsApplication.config.aaf.base.realms.federated = [
       request: [attributes: true]
     ]
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     
     request.setAttribute('Shib-Entity-ID', 'http://test.com/idpshibboleth') 
     request.setAttribute('displayName', 'Joe Bloggs')
@@ -42,7 +42,7 @@ class AuthControllerSpec extends spock.lang.Specification {
     grailsApplication.config.aaf.base.realms.federated = [
       request: [attributes: false]
     ]
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     
     request.addHeader('Shib-Entity-ID', 'http://test.com/idpshibboleth') 
     request.addHeader('displayName', 'Joe Bloggs')
@@ -80,7 +80,7 @@ class AuthControllerSpec extends spock.lang.Specification {
       sso_endpoint: "/Shibboleth.sso/Login"
     ]
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
 
     controller.metaClass.createLink = { attrs ->
       linkAction = attrs.action
@@ -108,7 +108,7 @@ class AuthControllerSpec extends spock.lang.Specification {
       sso_endpoint: "/Shibboleth.sso/Login"
     ]
 
-    controller.metaClass.getGrailsApplication = { -> [config: ConfigurationHolder.config]}
+    controller.metaClass.getGrailsApplication = { -> [config: Holders.config]}
     
     controller.metaClass.createLink = { attrs ->
       linkAction = attrs.action
