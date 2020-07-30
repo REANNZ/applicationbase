@@ -7,7 +7,7 @@ class ErrorController {
 
   def notPermitted() {
     if(request.forwardURI.startsWith("/api")) {
-      log.error "API request not permitited from ${request.remoteHost} directed to ${request.forwardURI}"
+      log.error "API request not permitted from ${request.remoteHost} directed to ${request.forwardURI}"
 
       response.status = 403
       render buildJSONErrorResponse('not permitted', 'api action not permitted - see documentation') as JSON
@@ -27,6 +27,18 @@ class ErrorController {
     }
 
     render view: "/404"
+  }
+
+  def notAllowed() {
+    if(request.forwardURI.startsWith("/api")) {
+      log.error "API request from ${request.remoteHost} method not allowed to ${request.forwardURI}"
+
+      response.status = 405
+      render buildJSONErrorResponse('not permitted', 'api action method not allowed - see documentation') as JSON
+      return
+    }
+
+    render view: "/405"
   }
 
   def internalServerError() {

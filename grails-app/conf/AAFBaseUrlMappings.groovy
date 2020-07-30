@@ -78,7 +78,7 @@ class AAFBaseUrlMappings {
     // Errors
     "403"(controller:'error', action:'notPermitted')
     "404"(controller:'error', action:'notFound')
-    "405"(view:'/405')
+    "405"(controller:'error', action:'notAllowed')
     "500"(controller:'error', action:'internalServerError')
 
     // Greenmail (Development mode only)
