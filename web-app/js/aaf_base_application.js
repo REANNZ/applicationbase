@@ -47,6 +47,23 @@ $(function() {
     });
   });
 
+  $('a.unarchive-ensure').click(function(e) {
+    var btn = $(this)
+    e.preventDefault();
+    bootbox.dialog(btn.data('confirm'), [{
+      'label': "Cancel",
+      'class': "btn"
+    }, {
+      'label': "Unarchive",
+      'class': "btn-warning",
+      'callback': function() {
+        btn.next('form').submit();
+      }
+    }], {
+      'header': 'Confirm Unarchive'
+    });
+  });
+
   $('a.form-link-submitter').click(function(e) {
     $(this).next('form').submit();
   });
