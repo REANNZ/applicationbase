@@ -11,7 +11,7 @@ class SMSDeliveryService {
     def config = grailsApplication.config.aaf.base.sms
     to = to[1..-1] // Remove leading + character
 
-    boolean outcome = true
+    boolean outcome = false
     http.request( POST ) {
       uri.path = '/api/1/sms/out'
       uri.query = [userId: config.api_key, password:config.api_secret, to:to, body:text]
